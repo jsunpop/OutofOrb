@@ -86,6 +86,10 @@ func spawn_item(item_type, item_position):
 		var gun = preload("res://Gun.tscn").instance()
 		gun.global_position = item_position
 		get_parent().add_child(gun)
+	if item_type == "Key":
+		var key = preload("res://Key.tscn").instance()
+		key.global_position = item_position
+		get_parent().add_child(key)
 
 
 func mob_killed():

@@ -35,7 +35,13 @@ func _physics_process(delta):
 
 
 func _on_Mob_body_shape_entered(body_rid, body, body_shape_index, local_shape_index):
-	if body is RigidBody2D:
+	if body.get_parent().score == 9 and body is RigidBody2D:
+		print("tenth")
+		body.emit_signal('shothit')
+		queue_free()
+		body.spawn_item("Key", global_position)
+		
+	if body is RigidBody2D and body.get_parent().score != 9:
 		print('hi')
 		body.emit_signal('shothit')
 		queue_free()

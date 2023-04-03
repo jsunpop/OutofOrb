@@ -92,7 +92,7 @@ margin_right = 247.04
 margin_bottom = 91.76
 rect_scale = Vector2( 1.5, 1.5 )
 window_title = "GOOD WORK!"
-dialog_text = "You cleared out the first wave of enemies, but they were able to call backup! Job's not finished!"
+dialog_text = "Agent! They were able to call backup! Clear out the next room ASAP!!"
 dialog_autowrap = true
 
 [node name="PopUpTimer" type="Timer" parent="."]
