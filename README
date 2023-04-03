@@ -1,0 +1,17 @@
+Game Name: Out of Orbit
+
+Developers: Arsh Ganjoo, Jacob Sun, Riemann Verdeflor
+Team Name: Professors of Quantum Rizzics
+
+Deadline: April 24
+
+Version Control System Standards
+
+nodeName_month_day.tscn
+
+
+Pipeline Process:
+
+Building from the ground up;
+Room Elements --> Mob --> Items and Drops --> Dialogue/Text
+
