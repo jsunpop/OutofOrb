@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Super Smash Bros Brawl - Main Theme.mp3-e70766f8d646c911c78230008dc31375.mp3str"
+
+[deps]
+
+source_file="res://dodge_assets/art/Super Smash Bros Brawl - Main Theme.mp3"
+dest_files=[ "res://.import/Super Smash Bros Brawl - Main Theme.mp3-e70766f8d646c911c78230008dc31375.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

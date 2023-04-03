@@ -1,0 +1,23 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/smash-bros-ultimate-super-smash-bros-ultimate-falling-off-stage-sound-effect.wav-9fb1632b76fb9e567e703964c3049ff1.sample"
+
+[deps]
+
+source_file="res://dodge_assets/art/smash-bros-ultimate-super-smash-bros-ultimate-falling-off-stage-sound-effect.wav"
+dest_files=[ "res://.import/smash-bros-ultimate-super-smash-bros-ultimate-falling-off-stage-sound-effect.wav-9fb1632b76fb9e567e703964c3049ff1.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
