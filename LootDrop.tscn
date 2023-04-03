@@ -385,5 +385,5 @@ animation = "yellow"
 position = Vector2( 1, 2 )
 shape = SubResource( 65 )
 
-[connection signal="area_entered" from="." to="." method="_on_LootDrop_area_entered"]
+[connection signal="body_entered" from="." to="." method="_on_LootDrop_body_entered"]
 [connection signal="collect" from="." to="." method="_on_LootDrop_collect"]

@@ -21,9 +21,10 @@ func _on_Bullet_area_entered(body):
 		emit_signal("shothit")
 		queue_free()
 		hide()
-	else:
+	if body is TileMap:
 		queue_free()
 		hide()
+
 
 func _on_Bullet_body_shape_entered(body_rid, body, body_shape_index, local_shape_index):
 	if body.is_in_group('damageable'):
@@ -31,9 +32,6 @@ func _on_Bullet_body_shape_entered(body_rid, body, body_shape_index, local_shape
 		queue_free()
 		hide()
 	if body is TileMap:
-		queue_free()
-		hide()
-	else:
 		queue_free()
 		hide()
 

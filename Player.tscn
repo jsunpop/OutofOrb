@@ -61,7 +61,7 @@ animations = [ {
 radius = 17.9604
 height = 10.8484
 
-[node name="Player" type="Area2D"]
+[node name="Player" type="KinematicBody2D"]
 position = Vector2( -4, 3 )
 script = ExtResource( 3 )
 
@@ -88,6 +88,4 @@ wait_time = 0.2
 [node name="BulletPoint" type="Node2D" parent="."]
 position = Vector2( 23, 1 )
 
-[connection signal="area_entered" from="." to="." method="_on_Player_area_entered"]
-[connection signal="body_entered" from="." to="." method="_on_Player_body_entered"]
 [connection signal="timeout" from="FireDelayTimer" to="." method="_on_FireDelayTimer_timeout"]

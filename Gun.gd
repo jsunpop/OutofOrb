@@ -22,14 +22,14 @@ func _process(_delta):
 			emit_signal("pickup")
 
 
-func _on_Gun_area_entered(area):
-	if area.get_name() == "Player":
+func _on_Gun_body_entered(body):
+	if body is KinematicBody2D:
 		inside_area = true
 		print("pickup pls")
 
 
-func _on_Gun_area_exited(area):
-	if area.get_name() == "Player":
+func _on_Gun_body_exited(body):
+	if body is KinematicBody2D:
 		inside_area = false
 
 

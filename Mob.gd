@@ -40,4 +40,8 @@ func _on_Mob_body_shape_entered(body_rid, body, body_shape_index, local_shape_in
 		body.emit_signal('shothit')
 		queue_free()
 		body.spawn_item("Loot", global_position) # Replace with function body.
-		
+	if body is KinematicBody2D:
+		body.emit_signal('hit')
+		queue_free()
+		body.hide()
+		$CollisionShape2D.set_deferred("disabled", true)

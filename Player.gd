@@ -1,8 +1,8 @@
-extends Area2D
+extends KinematicBody2D
 signal hit
 
 onready var fireDelayTimer := $FireDelayTimer
-export var speed = 400 # How fast the player will move (pixels/sec).
+export var speed = 200 # How fast the player will move (pixels/sec).
 var bullet_path = preload('res://Bullet.tscn')
 var bullet_speed = 300
 var screen_size # Size of the game window.
@@ -70,6 +70,8 @@ func _process(delta):
 	elif velocity.y != 0:
 		$AnimatedSprite.animation = "up"
 		#$AnimatedSprite.flip_v = velocity.y > 0 
+		
+	move_and_collide(velocity * delta)
 		
 	position += velocity * delta
 	position.x = clamp(position.x, 0, screen_size.x)

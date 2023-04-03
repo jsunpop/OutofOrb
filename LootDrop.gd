@@ -21,8 +21,8 @@ func _ready():
 
 
 
-func _on_LootDrop_area_entered(area):
-	if area.get_name() == 'Player':
+func _on_LootDrop_body_entered(body):
+	if body.get_name() == 'Player':
 		hide()
 		queue_free() # Loot Drop disappears after being hit.`
 		emit_signal("collect")
