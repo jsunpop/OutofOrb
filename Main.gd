@@ -101,7 +101,12 @@ func _on_HUD_complete():
 	hostage1.play()
 	hostage2.play()
 	hostage3.play()
-	hostage4.play() # Replace with function body.
+	hostage4.play()
+	yield(get_tree().create_timer(4), "timeout") # Replace with function body.
+	hostage1.stop()
+	hostage2.stop()
+	hostage3.stop()
+	hostage4.stop()
 
 
 func _on_AlarmTimer_timeout():

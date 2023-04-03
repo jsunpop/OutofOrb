@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://HUD.gd" type="Script" id=1]
 [ext_resource path="res://dodge_assets/fonts/Xolonium-Regular.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://ARCADECLASSIC.TTF" type="DynamicFontData" id=3]
 
 [sub_resource type="DynamicFont" id=5]
 size = 64
@@ -12,6 +13,10 @@ action = "start_game"
 
 [sub_resource type="ShortCut" id=2]
 shortcut = SubResource( 1 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 72
+font_data = ExtResource( 3 )
 
 [node name="HUD" type="CanvasLayer"]
 script = ExtResource( 1 )
@@ -33,13 +38,26 @@ wait_time = 2.0
 one_shot = true
 
 [node name="Message" type="Label" parent="."]
-margin_left = 170.0
+margin_left = 220.0
 margin_top = 349.0
-margin_right = 314.0
-margin_bottom = 363.0
-rect_scale = Vector2( 2.94771, 4.45855 )
-custom_colors/font_color = Color( 0.972549, 0.0156863, 0.0156863, 1 )
+margin_right = 364.0
+margin_bottom = 423.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 6 )
 align = 1
+
+[node name="Message2" type="Label" parent="."]
+visible = false
+margin_left = 190.0
+margin_top = 290.0
+margin_right = 579.0
+margin_bottom = 441.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 6 )
+text = "Take Back
+the Ship!"
+align = 1
+autowrap = true
 
 [node name="ScoreLabel" type="Label" parent="."]
 margin_left = 239.0
@@ -63,10 +81,29 @@ window_title = "YOUR MISSION:"
 dialog_text = "Four people are being held hostage behind enemy lines. Eliminate 10 enemies to free them! (WASD to move, mouse to shoot)"
 dialog_autowrap = true
 
+[node name="WaveOneCompPopup" type="AcceptDialog" parent="."]
+anchor_left = 0.268
+anchor_top = 0.415
+anchor_right = 0.268
+anchor_bottom = 0.417
+margin_left = 0.0399933
+margin_top = 1.19998
+margin_right = 247.04
+margin_bottom = 91.76
+rect_scale = Vector2( 1.5, 1.5 )
+window_title = "GOOD WORK!"
+dialog_text = "You cleared out the first wave of enemies, but they were able to call backup! Job's not finished!"
+dialog_autowrap = true
+
 [node name="PopUpTimer" type="Timer" parent="."]
 wait_time = 3.0
+one_shot = true
+
+[node name="PopUpTimer2" type="Timer" parent="."]
+wait_time = 4.0
 one_shot = true
 
 [connection signal="pressed" from="StartButton" to="." method="_on_StartButton_pressed"]
 [connection signal="timeout" from="MessageTimer" to="." method="_on_MessageTimer_timeout"]
 [connection signal="timeout" from="PopUpTimer" to="." method="_on_PopUpTimer_timeout"]
+[connection signal="timeout" from="PopUpTimer2" to="." method="_on_PopUpTimer2_timeout"]
